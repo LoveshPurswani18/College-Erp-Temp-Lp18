@@ -2,7 +2,7 @@ import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
-import { cn } from "@/lib/utils"
+import { cn } from "../../lib/utils"
 // import { cn } from "@/lib/utils"
 // import { cn } from "../../lib/utils"
 
@@ -12,7 +12,7 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-[green] text-primary-foreground hover:bg-primary/90",
+        default: "bg-[#2688F7] text-primary-foreground hover:bg-[#B0D4FC]",
         destructive:
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
@@ -21,7 +21,7 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
-        primary:"bg-black text-white"
+        primary:"bg-black text-whitesmoke"
       },
       size: {
         default: "h-10 px-4 py-2",
@@ -48,7 +48,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button"
     return (
       <Comp
-        className={cn(buttonVariants({ variant:"default", size, className:"text-red-500"}))} // This is where - add tailwind classes and varibales
+        className={cn(buttonVariants({ variant:"default", size, className:"text-white m-7"}))} // This is where - add tailwind classes and varibales
         ref={ref}
         {...props}
       />
