@@ -157,7 +157,6 @@ module.exports = {
       },
     },
   },
-<<<<<<< HEAD
   plugins: [
     require("tailwindcss-animate"),
     // Add the aspect-ratio plugin to support responsive images
@@ -165,7 +164,4 @@ module.exports = {
     // Add the forms plugin for better form styling
     require('@tailwindcss/forms'),
   ],
-=======
-  plugins: [require("tailwindcss-animate")],
->>>>>>> 314e2519912516d583b3e38e795478e65a72c988
 }
